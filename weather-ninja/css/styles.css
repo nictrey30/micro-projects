@@ -1,11 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   background: #eeedec;
   letter-spacing: 0.2em;
-  font-size: 0.8em;
-}
+  font-size: 0.8em; }
+
+.container {
+  background: red; }
