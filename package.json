@@ -1,0 +1,23 @@
+{
+  "name": "micro-projects",
+  "version": "1.0.0",
+  "description": "micro projects",
+  "main": "index.js",
+  "scripts": {
+    "sass-weather": "node-sass -w weather-ninja/scss/ -o weather-ninja/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nictrey30/micro-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nictrey30/micro-projects/issues"
+  },
+  "homepage": "https://github.com/nictrey30/micro-projects#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
