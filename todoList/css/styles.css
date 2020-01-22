@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #352f5b;
+}
+
+.container {
+  max-width: 400px;
+}
+
+input[type='text'],
+input[type='text']:focus {
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.todos li {
+  background: #423a6f;
+  list-style-type: none;
+}
+.todos li .delete {
+  cursor: pointer;
+}
+
+.highlight {
+  background: lightblue;
+  color: black;
+}
+
+.filtered {
+  display: none !important;
+}
