@@ -11,3 +11,7 @@ body {
 .icon {
   border-radius: 50%;
   transform: translateY(-50%); }
+
+.container {
+  max-width: 400px;
+  max-height: 500px; }
