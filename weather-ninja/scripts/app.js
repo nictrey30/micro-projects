@@ -44,7 +44,7 @@ cityform.addEventListener('submit', e => {
   // prevent default action, so it doesn't refresh the page
   e.preventDefault();
 
-  const city = cityform.city.value.trim();
+  let city = cityform.city.value.trim();
   // clear out the form fields
   cityform.reset();
 
@@ -52,4 +52,13 @@ cityform.addEventListener('submit', e => {
   updateCity(city)
     .then(data => updateUI(data))
     .catch(err => console.log(err));
+
+  // set local storage
+  localStorage.setItem('city', city);
 });
+
+if (localStorage.getItem('city')) {
+  updateCity(localStorage.getItem('city'))
+    .then(data => updateUI(data))
+    .catch(err => console.log(err));
+}
