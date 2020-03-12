@@ -1,6 +1,16 @@
 <%- include('partials/header') %>
 
 <%- include('partials/header') %>
+<div class="ui mini modal">
+  <div class="header">Delete your Joke</div>
+  <div class="content">
+    <p>Are you sure you want to delete the joke?</p>
+  </div>
+  <div class="actions">
+    <div class="ui approve button">yes</div>
+    <div class="ui cancel button">No</div>
+  </div>
+</div>
 <div class="ui main container text segment">
   <div class="ui huge header"><%= joke.question %> </div>
   <div class="ui top attached">
@@ -12,10 +22,23 @@
         <span>created: <%= joke.created.toDateString() %></span>
       </div>
       <a class="ui small inverted violet button" href="/jokes/<%= joke._id %>/edit">Edit Joke</a>
-      <form id="delete" action="/jokes/<%= joke._id %>?_method=DELETE" method="POST">
-        <button class="ui red small inverted button" id="delete">Delete Joke</button>
+      <button class="ui red small inverted button" id="delete">Delete Joke</button>
+
+      <form action="/jokes/<%= joke._id %>?_method=DELETE" method="POST" id="myForm">
       </form>
     </div>
   </div>
 </div>
+<script>
+  $('#delete').on('click', function () {
+    $('.mini.modal').modal('show');
+    $('.approve').on('click', function () {
+      $('#myForm').submit();
+    })
+    $('.cancel').on('click',
+      function () {
+        $('.mini.modal').modal('hide');
+      })
+  })
+</script>
 <%- include('partials/footer') %>
