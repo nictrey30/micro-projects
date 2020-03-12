@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<%- include('partials/header') %>
+<div class="ui main container text segment">
+  <div class="ui huge header"><%= joke.question %> </div>
+  <div class="ui top attached">
+    <div class="item">
+      <div class="content">
+        <p><%= joke.content %></p>
+      </div>
+      <div class="description">
+        <span>created: <%= joke.created.toDateString() %></span>
+      </div>
+      <a class="ui small inverted violet button" href="/jokes/<%= joke._id %>/edit">Edit Joke</a>
+      <form id="delete" action="/jokes/<%= joke._id %>?_method=DELETE" method="POST">
+        <button class="ui red small inverted button" id="delete">Delete Joke</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>

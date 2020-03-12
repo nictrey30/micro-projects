@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<div class="ui main container text segment">
+  <div class="ui huge header">Edit Page</div>
+  <form action="/jokes/<%= joke._id %>?_method=PUT" method="POST" class="ui form">
+    <div class="field disabled">
+      <label>Question to edit</label>
+      <input type="text" name="joke[question]" id="" value="<%= joke.question %> " />
+    </div>
+    <div class="field">
+      <label>Edit Answer</label>
+      <textarea name="joke[content]" id="" rows="3"> <%= joke.content %></textarea>
+    </div>
+    <div class="field">
+      <label>Edit Author</label>
+      <select name="joke[author]" id="" class="ui dropdown">
+        <option value="Cucu">Cucu</option>
+        <option value="Trey">Trey</option>
+      </select>
+    </div>
+    <input class="ui violet inverted button" type="submit" value="Submit" />
+  </form>
+</div>
+<%- include('partials/footer') %>

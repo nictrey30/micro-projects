@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<div class="ui container">
+  <div class="ui main container text segment">
+    <div class="ui huge header">New Joke</div>
+    <form action="/jokes" method="POST" class="ui form">
+      <div class="field">
+        <label>Question</label>
+        <input type="text" name="joke[question]" id="" placeholder="question" />
+      </div>
+      <div class="field">
+        <label>Answer</label>
+        <textarea name="joke[content]" id="" rows="3"> </textarea>
+      </div>
+      <div class="field">
+        <label>Author</label>
+        <select name="joke[author]" id="" class="ui dropdown">
+          <option value="Cucu">Cucu</option>
+          <option value="Trey">Trey</option>
+        </select>
+      </div>
+      <input class="ui green inverted button" type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
+<%- include('partials/footer') %>

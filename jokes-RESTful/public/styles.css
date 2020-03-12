@@ -1,0 +1,19 @@
+body {
+  font-size: 1.3rem;
+}
+i.icon {
+  font-size: 2rem;
+}
+.ui.container {
+  margin-top: 10rem;
+}
+.content {
+}
+.date {
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+}
+#delete {
+  display: inline;
+}

@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<div class="ui container">
+  <div class="ui huge centered header">Jokes RESTful App</div>
+  <div class="ui accordion">
+    <% jokes.forEach(joke => { %>
+    <div class="title">
+      <i class="dropdown icon"></i><%= joke.question %>
+    </div>
+    <div class="content">
+      <p class="transition hidden"><%= joke.content %> </p>
+      <div class="date">
+        <p>
+          <span>created: <%= joke.created.toDateString() %></span>, <span> by <%= joke.author %></span>
+        </p>
+      </div>
+      <!-- show one specific joke -->
+      <a class="ui small inverted violet button" href="/jokes/<%= joke._id %> ">Edit / Delete Joke</a>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include('partials/footer') %>
