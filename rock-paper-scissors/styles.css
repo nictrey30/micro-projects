@@ -1,0 +1,6 @@
+.b-3 {
+  border-width: 5px !important;
+}
+.b-3:hover {
+  border-color: white !important;
+}
